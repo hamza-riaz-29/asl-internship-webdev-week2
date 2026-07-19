@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASL Week 2 - To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="app-container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Advance Soft Logics - Week 2 Project</p>
+        </header>
+
+        <!-- Task Input Form -->
+        <section class="input-section">
+            <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off">
+            <button id="add-btn">Add Task</button>
+        </section>
+
+        <!-- Inline Validation Error Message Container -->
+        <div id="error-message" class="hidden"></div>
+
+        <!-- Filter Controls -->
+        <section class="filter-section">
+            <button id="filter-all" class="active">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+        </section>
+
+        <!-- Tasks Counter & List -->
+        <section class="list-section">
+            <p id="counter">Remaining Tasks: 0</p>
+            <ul id="task-list">
+                <!-- JavaScript automatically templates dynamic list elements here -->
+            </ul>
+        </section>
+    </main>
+
+    <!-- Required module script link -->
+    <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* Base Style & Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f7f6;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* App Main Container */
+.app-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 550px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #1e2d3d;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Input Section */
+.input-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+#task-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+#task-input:focus {
+  border-color: #5aa379;
+}
+
+#add-btn {
+  padding: 12px 20px;
+  background-color: #5aa379;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+#add-btn:hover {
+  background-color: #488462;
+}
+
+/* Validation Error Styling */
+#error-message {
+  color: #d9534f;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Filter Section Buttons */
+.filter-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.filter-section button {
+  padding: 8px 16px;
+  background: #eee;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #555;
+  transition: 0.2s;
+}
+
+.filter-section button:hover {
+  background: #ddd;
+}
+
+.filter-section button.active {
+  background: #1e2d3d;
+  color: white;
+}
+
+/* Task List Counter & Items */
+#counter {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+#task-list {
+  list-style: none;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.task-item:hover {
+  background: #f9f9f9;
+}
+
+.task-text {
+  font-size: 16px;
+  cursor: pointer;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.task-item.completed .task-text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #cc0000;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.delete-btn:hover {
+  text-decoration: underline;
+}
+
+.empty-message {
+  text-align: center;
+  color: #888;
+  padding: 20px;
+  font-style: italic;
+}
+
+/* Responsive Breakpoints (Mobile and Tablet) */
+@media (max-width: 480px) {
+  body {
+    padding: 15px 10px;
+  }
+  .app-container {
+    padding: 20px 15px;
+  }
+  .input-section {
+    flex-direction: column;
+  }
+  #add-btn {
+    width: 100%;
+  }
+}
